@@ -13,8 +13,6 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import org.springframework.context.annotation.Profile;
-
 import com.stephen.validator.Author;
 
 @Entity

@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
 
 import com.stephen.model.Book;
@@ -42,6 +41,7 @@ public class BookController {
 
     // Find
     @GetMapping("/books")
+    // tested by: curl -v localhost:8080/books -u user:password
     List<Book> findAll() {
         return repository.findAll();
     }
