@@ -8,4 +8,5 @@ validation reference: https://www.mkyong.com/spring-boot/spring-rest-validation-
 security reference: https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/
 					https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-security
 					https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/
-					
+security with JPA reference: https://www.onlinetutorialspoint.com/spring-boot/spring-boot-security-mysql-database-integration-example.html
+			Worth to check: https://www.concretepage.com/spring-boot/spring-boot-security-rest-jpa-hibernate-mysql-crud-example

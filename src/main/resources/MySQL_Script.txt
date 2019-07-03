@@ -1,0 +1,40 @@
+CREATE DATABASE IF NOT EXISTS `SPRING_BOOT_DEMO2`;
+
+USE SPRING_BOOT_DEMO2;
+
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `active` bit(1) DEFAULT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `role` (
+  `role_id` int(11) NOT NULL AUTO_INCREMENT,
+  `role_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `user_role` (
+  `user_id` int(11) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  PRIMARY KEY (`user_id`,`role_id`),
+  UNIQUE KEY `UK_it77eq964jhfqtu54081ebtio` (`role_id`),
+  CONSTRAINT `FK859n2jvi8ivhui0rl0esws6o` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  CONSTRAINT `FKa68196081fvovjhkek5m97n3y` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- creating user
+insert into USER values(1,b'1','man','stephen','password');
+-- creating ADMIN role
+insert into ROLE values(1,'ADMIN');
+-- Mapping ADMIN role id (1) to man user userid (1)
+insert into USER_ROLE values(1,1);
+
+insert into USER values(2,1,'','user','password');
+insert into ROLE values(2,'USER');
+insert into USER_ROLE values(2,2);
+
+insert into USER_ROLE values(1,2);
