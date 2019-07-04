@@ -38,3 +38,7 @@ insert into ROLE values(2,'USER');
 insert into USER_ROLE values(2,2);
 
 insert into USER_ROLE values(1,2);
+
+insert into book values(1, 'Santideva', 'A Guide to the Bodhisattva Way of Life', 15.41);
+insert into book values(2, 'Marie Kondo', 'The Life-Changing Magic of Tidying Up', 9.69);
+insert into book values(3, 'Martin Fowler', 'Refactoring: Improving the Design of Existing Code', 47.99);
