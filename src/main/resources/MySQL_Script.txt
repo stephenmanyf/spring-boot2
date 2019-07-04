@@ -21,20 +21,33 @@ CREATE TABLE `user_role` (
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
   PRIMARY KEY (`user_id`,`role_id`),
-  UNIQUE KEY `UK_it77eq964jhfqtu54081ebtio` (`role_id`),
+-- UNIQUE KEY `UK_it77eq964jhfqtu54081ebtio` (`role_id`),
   CONSTRAINT `FK859n2jvi8ivhui0rl0esws6o` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `FKa68196081fvovjhkek5m97n3y` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- creating user
-insert into USER values(1,b'1','man','stephen','password');
+insert into user values(1,b'1','man','stephen','password');
 -- creating ADMIN role
-insert into ROLE values(1,'ADMIN');
+insert into role values(1,'ADMIN');
 -- Mapping ADMIN role id (1) to man user userid (1)
-insert into USER_ROLE values(1,1);
+insert into user_role values(1,1);
 
-insert into USER values(2,1,'','user','password');
-insert into ROLE values(2,'USER');
-insert into USER_ROLE values(2,2);
+insert into user values(2,1,'','user','password');
+insert into role values(2,'USER');
+insert into user_role values(2,2);
 
-insert into USER_ROLE values(1,2);
+insert into user_role values(1,2);
+
+CREATE TABLE `book` (
+	`book_id` int(11) NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`author` varchar(255) NOT NULL,
+	`price` decimal(7,2) NOT NULL,
+	PRIMARY KEY(`book_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+insert into book values(1, 'A Guide to the Bodhisattva Way of Life', 'Santideva', 15.41);
+insert into book values(2, 'The Life-Changing Magic of Tidying Up', 'Marie Kondo', 9.69);
+insert into book values(3, 'Refactoring: Improving the Design of Existing Code', 'Martin Fowler', 47.99);
+	
