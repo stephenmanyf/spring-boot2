@@ -21,3 +21,10 @@ TODO:
 - Logout
 - Log4j or SLF4J
 - Change context path
+
+
+To package a jar file:
+$ mvn package
+
+To run the jar directly:
+$ java -jar /Users/StephenMan/Development/Workspace/Tutorial/mkyong-tutorial/new-spring-boot/spring-boot-demo2/target/app.jar
