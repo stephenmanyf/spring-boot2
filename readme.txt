@@ -8,5 +8,23 @@ validation reference: https://www.mkyong.com/spring-boot/spring-rest-validation-
 security reference: https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/
 					https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-security
 					https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/
+					https://spring.io/guides/topicals/spring-security-architecture
 security with JPA reference: https://www.onlinetutorialspoint.com/spring-boot/spring-boot-security-mysql-database-integration-example.html
 			Worth to check: https://www.concretepage.com/spring-boot/spring-boot-security-rest-jpa-hibernate-mysql-crud-example
+			
+			
+TODO:
+- Login attempt limit (Reference: https://www.mkyong.com/spring-security/spring-security-limit-login-attempts-example/)
+- Session in Redis
+- JWT
+- OAuth2 and traditional authentication altogether
+- Logout
+- Log4j or SLF4J
+- Change context path
+
+
+To package a jar file:
+$ mvn package
+
+To run the jar directly:
+$ java -jar /Users/StephenMan/Development/Workspace/Tutorial/mkyong-tutorial/new-spring-boot/spring-boot-demo2/target/app.jar

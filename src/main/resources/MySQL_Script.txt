@@ -50,4 +50,3 @@ CREATE TABLE `book` (
 insert into book values(1, 'A Guide to the Bodhisattva Way of Life', 'Santideva', 15.41);
 insert into book values(2, 'The Life-Changing Magic of Tidying Up', 'Marie Kondo', 9.69);
 insert into book values(3, 'Refactoring: Improving the Design of Existing Code', 'Martin Fowler', 47.99);
-	
