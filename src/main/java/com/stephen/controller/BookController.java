@@ -3,6 +3,7 @@
  * Validation Reference: https://www.mkyong.com/spring-boot/spring-rest-validation-example/
  * 						https://www.baeldung.com/spring-response-status-exception
  * Reference: https://www.mkyong.com/spring-boot/spring-rest-spring-security-example/
+ * Logging Reference: https://www.baeldung.com/spring-boot-logging 
  * 
  */
 package com.stephen.controller;
@@ -13,6 +14,8 @@ import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
@@ -23,6 +26,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
@@ -35,15 +39,30 @@ import com.stephen.exception.BookUnSupportedFieldPatchException;
 @RestController
 @Validated //class level
 public class BookController {
+	
+	Logger logger = LoggerFactory.getLogger(BookController.class);
+	
+	@GetMapping("/")
+	public String index() {
+		logger.trace("A TRACE Message");
+		logger.debug("A DEBUG Message");
+		logger.info("An INFO Message");
+		logger.warn("A WARN Message");
+		logger.error("An ERROR Message");
+		
+		return "Howdy! Check out the Logs to see the output...";
+	}
 
     @Autowired
     private BookRepository repository;
-
+    	
     // Find
     @GetMapping("/books")
     // tested by: curl -v localhost:8080/books -u user:password
     List<Book> findAll() {
-        return repository.findAll();
+    	logger.info("GET /books");
+    	
+    	return repository.findAll();
     }
 
     // Save

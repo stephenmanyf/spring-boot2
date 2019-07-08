@@ -11,6 +11,7 @@ security reference: https://www.mkyong.com/spring-boot/spring-rest-spring-securi
 					https://spring.io/guides/topicals/spring-security-architecture
 security with JPA reference: https://www.onlinetutorialspoint.com/spring-boot/spring-boot-security-mysql-database-integration-example.html
 			Worth to check: https://www.concretepage.com/spring-boot/spring-boot-security-rest-jpa-hibernate-mysql-crud-example
+Logging reference: Logging Reference: https://www.baeldung.com/spring-boot-logging
 			
 			
 TODO:
@@ -19,7 +20,7 @@ TODO:
 - JWT
 - OAuth2 and traditional authentication altogether
 - Logout
-- Log4j or SLF4J
+x)- Log4j or SLF4J
 - Change context path
 
 
