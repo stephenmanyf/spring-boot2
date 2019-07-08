@@ -111,6 +111,12 @@
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
+		
+		<!-- Reference: http://www.voidcn.com/article/p-prjyyzeo-bd.html -->
+		<dependency>
+		   <groupId>org.springframework.boot</groupId>
+		   <artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
     </dependencies>
 
     <build>

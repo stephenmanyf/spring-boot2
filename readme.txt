@@ -12,6 +12,7 @@ security reference: https://www.mkyong.com/spring-boot/spring-rest-spring-securi
 security with JPA reference: https://www.onlinetutorialspoint.com/spring-boot/spring-boot-security-mysql-database-integration-example.html
 			Worth to check: https://www.concretepage.com/spring-boot/spring-boot-security-rest-jpa-hibernate-mysql-crud-example
 Logging reference: Logging Reference: https://www.baeldung.com/spring-boot-logging
+Swallow unexpected exception: http://www.voidcn.com/article/p-prjyyzeo-bd.html
 			
 			
 TODO:
